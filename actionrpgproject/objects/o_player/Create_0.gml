@@ -18,7 +18,7 @@ enum dir {
 }
 
 
-action_ = player.move
+state_ = player.move
 //Sprite move lookup table
 
 sprite_[player.move, dir.right] = s_player_run_right;
