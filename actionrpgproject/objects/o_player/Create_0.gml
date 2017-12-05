@@ -2,12 +2,15 @@ initialize_movement_entity(.5, 1, o_solid);
 image_speed = 0;
 acceleration_ = 0.5;
 max_speed_ = 1.5;
+roll_speed_ = 2;
 direction_facing_ = dir.right;
+roll_direction_ = 0;
 global.player_health = 4;
 
 enum player {
 	move,
-	sword
+	sword,
+	evade
 }
 
 enum dir {
@@ -30,3 +33,8 @@ sprite_[player.sword, dir.right] = s_player_attack_right;
 sprite_[player.sword, dir.up] = s_player_attack_up;
 sprite_[player.sword, dir.down] = s_player_attack_down;
 sprite_[player.sword, dir.left] = s_player_attack_right;
+
+sprite_[player.evade, dir.right] = s_player_roll_right;
+sprite_[player.evade, dir.up] = s_player_roll_up;
+sprite_[player.evade, dir.down] = s_player_roll_down;
+sprite_[player.evade, dir.left] = s_player_roll_right;
